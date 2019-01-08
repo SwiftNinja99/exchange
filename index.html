@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Untitled Document</title>
+<title>Currency Exchanger</title>
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <script type="text/javascript" src="assets/js/exchanger.js">
 </script>
@@ -12,6 +12,7 @@
 <body>
 	<h1>Exchanger</h1>
 	<input type="text" id="input-value" onKeyUp="Exchanger.convert();">
+	<!--select and option make a dropdown menu-->
 	<select name="currency"
 			id="input-currency"
 			onChange="Exchanger.convert()">
@@ -60,7 +61,7 @@
 		<option value="BRL">Bulgarian Lev</option>
 		<option value="HUF">Hungarian Forint</option>
 		<option value="DKK">Danish Krone</option>
-		<option value="JPY" selected>Japanese Yen</option>
+		<option value="JPY">Japanese Yen</option>
 		<option value="ILS">Israeli New Shekel</option>
 		<option value="TRY">Turkish lira</option>
 		<option value="RON">Romanian Leu</option>
@@ -74,7 +75,7 @@
 		<option value="USD">United States Dollar</option>
 		<option value="KRW">South Korean won</option>
 		<option value="HKD">Hong Kong Dollar</option>
-		<option value="EUR">Euro</option>
+		<option value="EUR" selected>Euro</option>
 		<option value="ISK">Icelandic Króna</option>
 		<option value="CZK">Czech Koruna</option>
 		<option value="THB">Thai Baht</option>

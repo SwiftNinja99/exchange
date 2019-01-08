@@ -5,12 +5,22 @@ body, select, input[type="text"] {
 input[type="text"], select, label {
 	font-size: 16px;
 }
+body {
+	background-color: #000000;
+	font-family: "Comic Sans MS", sans-serif;
+  color: #9500ff;
+}
 
-input[readonly] {
-	background-color: rgba(0, 0, 0, 0.2);
-	font-style: italic;
+
+input {
+	background-color: #00ff00;
+  color: #9500ff;
 }
 
 input[type="text"] {
 	text-align: right;
+}
+
+input-value {
+	color: #00ff00
 }
