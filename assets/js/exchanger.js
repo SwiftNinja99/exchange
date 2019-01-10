@@ -50,13 +50,19 @@ var Exchanger = {
 		return select.options[select.selectedIndex].value;
 	},
 	getConversionRates: function() {
-		var apiURL = 'https://api.exchangeratesapi.io/latest?base=' + Exchanger.inputCurrency();
-		loadJSON(apiURL, function(data) {
-			Exchanger.Data[Exchanger.inputCurrency()] = data;
-			Exchanger.saveData();
-		}, function(xhr) {
-			console.log('Error');
-		});
+		if (isOnline()) {
+			var apiURL = 'https://api.exchangeratesapi.io/latest?base=' + Exchanger.inputCurrency();
+			loadJSON(apiURL, function(data) {
+				Exchanger.Data[Exchanger.inputCurrency()] = data;
+				Exchanger.saveData();
+			}, function(xhr) {
+				console.log('Error');
+			});
+		}
+
+		else {
+			alert("You are offline")
+		}
 
 	},
 	convert: function() {
